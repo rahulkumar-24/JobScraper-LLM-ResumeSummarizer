@@ -1,12 +1,4 @@
-Yes 👍 your README is already **clear, well-structured, and professional** — it explains your project, shows installation steps, and includes screenshots for visual proof.
 
-Just a few **small improvements** I’d suggest:
-
-* Fix minor formatting issues in code blocks (`\_` escaping and closing backticks count).
-* Make the repository name in the clone command match your folder name.
-* Add a short “How It Works” section so visitors understand the flow in 30 seconds.
-
-Here’s a slightly cleaned-up version of your README:
 
 ---
 
@@ -46,15 +38,15 @@ It leverages advanced scraping APIs and intelligent matching to help you find jo
 
 project/
 │── src/
-│   ├── helper.py               # Functions for PDF parsing, AI summarization & skill gap analysis
-│   ├── fetch\_job.py             # Fetch job data from APIs
-│── screenshot/                  # Project screenshots
+│   ├── helper.py          # Functions for PDF parsing, AI summarization & skill gap analysis
+│   ├── fetch\_job.py       # Fetch job data from APIs
+│── screenshot/            # Project screenshots
 │   ├── Resume\_Upload\_Feedback.png
 │   ├── Job\_Recommendation.png
-│── .env                         # API keys & environment variables
-│── app.py                       # Main Streamlit application
-│── requirements.txt             # Project dependencies
-│── README.md                    # Project documentation
+│── .env                   # API keys & environment variables
+│── app.py                 # Main Streamlit application
+│── requirements.txt       # Project dependencies
+│── README.md              # Project documentation
 
 ````
 
@@ -62,13 +54,13 @@ project/
 
 ## ⚙️ Installation & Setup
 
-1. Clone the repository
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/ai-job-recommender.git
+   cd ai-job-recommender
+````
 
-   git clone https://github.com/rahulkumar-24/JobScraper-LLM-ResumeSummarizer.git
-   cd JobScraper-LLM-ResumeSummarizer
-
-
-2. Create a virtual environment
+2. **Create a virtual environment**
 
    ```bash
    python -m venv venv
@@ -76,13 +68,13 @@ project/
    venv\Scripts\activate      # For Windows
    ```
 
-3. Install dependencies
+3. **Install dependencies**
 
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Setup environment variables
+4. **Setup environment variables**
 
    * Create a `.env` file in the root directory.
    * Add your API keys:
@@ -93,7 +85,7 @@ project/
      GEMINI_API_KEY=your_gemini_api_key
      ```
 
-5. Run the application
+5. **Run the application**
 
    ```bash
    streamlit run app.py
@@ -127,8 +119,12 @@ This project is licensed under the MIT License.
 
 ## ✨ Author
 
-Rahul Kumar
-📧 [rahulkumar.19k8@gmail.com](mailto:rahulkumar.19k8@gmail.com)
-🔗 [LinkedIn](https://www.linkedin.com/in/rahulkumar19k8/)
+**Your Name**
+📧 [your.email@example.com](mailto:your.email@example.com)
+🔗 [LinkedIn](https://linkedin.com/in/yourprofile) | [GitHub](https://github.com/yourusername)
 
+```
 
+---
+
+```
