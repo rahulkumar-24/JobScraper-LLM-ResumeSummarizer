@@ -64,7 +64,7 @@ AI-Job-Recommender/
 
 ```bash
 git clone https://github.com/yourusername/AI-Job-Recommender.git
-cd AJobScraper-LLM-ResumeSummarizer
+cd JobScraper-LLM-ResumeSummarizer
 ```
 
 2️⃣ **Create & Activate Virtual Environment**
@@ -100,8 +100,8 @@ streamlit run app.py
 
 ## 📬 Contact
 
-📧 Email: **[your.email@example.com](mailto:rahulkumar.19k8@gmail.com)**
-🔗 LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/rahulkumar19k8/)
+📧 Email: **[rahulkumar.19k8@gmail.com](mailto:rahulkumar.19k8@gmail.com)**
+🔗 LinkedIn: [https://www.linkedin.com/in/rahulkumar19k8/](https://www.linkedin.com/in/rahulkumar19k8/)
 
 ---
 
