@@ -1,128 +1,107 @@
-Here’s your updated **README.md** with your email and LinkedIn link inserted, while keeping the exact structure intact:
 
-```markdown
 # 📄 AI Job Recommender
 
-An AI-powered job recommendation tool that extracts information from your resume, summarizes your profile, identifies skill gaps, and fetches relevant job listings from platforms like LinkedIn and Naukri.  
-It leverages advanced scraping APIs and intelligent matching to help you find jobs that align with your skills and plan your next career step.
+This project recommends jobs based on a user’s resume by parsing the document, summarizing it, identifying skill gaps, and suggesting the next steps. It also scrapes LinkedIn jobs using the Scrapdog API and integrates multiple APIs for intelligent recommendations.
 
 ---
 
 ## 🚀 Features
 
-- **Resume Parsing** – Extracts skills and experience from uploaded PDF resumes.
-- **Resume Summarization** – Generates a concise summary of your professional background.
-- **Skill Gap Analysis** – Compares your skills with job requirements to identify missing skills.
-- **AI Career Guidance** – Suggests the next steps to improve your profile for better job matches.
-- **Multi-Platform Job Fetching** – Finds jobs from LinkedIn, Naukri, and other platforms.
-- **Streamlit Web App** – User-friendly interface for quick job recommendations.
-- **Real-time Scraping** – Powered by Scrapdog API and Apify Client for live job data.
+* **Resume Parsing** using PyMuPDF
+* **Summary Generation** of candidate’s experience and skills
+* **Skill Gap Analysis** for next career steps
+* **Job Recommendations** from LinkedIn (via Scrapdog API)
+* **Streamlit UI** for easy interaction
+* **.env file support** for managing API keys securely
 
 ---
 
-## 🛠️ Tech Stack & Libraries Used
+## 🛠️ Tech Stack & Libraries
 
-- **[Streamlit](https://streamlit.io/)** – Web application framework for building the UI.
-- **[PyMuPDF](https://pymupdf.readthedocs.io/)** – PDF parsing and text extraction.
-- **[python-dotenv](https://pypi.org/project/python-dotenv/)** – Environment variable management.
-- **[apify-client](https://docs.apify.com/api/client/python)** – Fetch job data from Apify actors.
-- **Scrapdog API** – For scraping LinkedIn job data efficiently.
+* **Python**
+* [Streamlit](https://streamlit.io/) – Web app framework
+* [PyMuPDF](https://pymupdf.readthedocs.io/) – PDF text extraction
+* [python-dotenv](https://pypi.org/project/python-dotenv/) – Environment variable management
+* [apify-client](https://pypi.org/project/apify-client/) – API integration
+* **Scrapdog API** – LinkedIn job scraping
 
 ---
 
 ## 📂 Project Structure
 
 ```
-
-project/
-│── src/
-│   ├── helper.py          # Functions for PDF parsing, AI summarization & skill gap analysis
-│   ├── fetch\_job.py       # Fetch job data from APIs
-│── screenshot/            # Project screenshots
-│   ├── Resume\_Upload\_Feedback.png
-│   ├── Job\_Recommendation.png
-│── .env                   # API keys & environment variables
-│── app.py                 # Main Streamlit application
-│── requirements.txt       # Project dependencies
-│── README.md              # Project documentation
-
-````
-
----
-
-## ⚙️ Installation & Setup
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/rahulkumar-24/JobScraper-LLM-ResumeSummarizer.git
-   cd ai-job-recommender
-````
-
-2. **Create a virtual environment**
-
-   ```bash
-   python -m venv venv
-   source venv/bin/activate   # For Linux/Mac
-   venv\Scripts\activate      # For Windows
-   ```
-
-3. **Install dependencies**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Setup environment variables**
-
-   * Create a `.env` file in the root directory.
-   * Add your API keys:
-
-     ```
-     SCRAPDOG_API_KEY=your_scrapdog_api_key
-     APIFY_API_TOKEN=your_apify_api_token
-     GEMINI_API_KEY=your_gemini_api_key
-     ```
-
-5. **Run the application**
-
-   ```bash
-   streamlit run app.py
-   ```
+AI-Job-Recommender/
+│
+├── screenshots/                # Project screenshots
+│   ├── resume_summary.png       # Resume summary screenshot
+│   ├── job_recommendations.png  # Job recommendation screenshot
+│
+├── src/                         # Source code
+│   ├── helper.py                # Resume parsing, summarization, skill gap analysis
+│   ├── fetch_job.py              # Job fetching from LinkedIn
+│
+├── .env                         # Environment variables (API keys)
+├── requirements.txt             # Python dependencies
+├── app.py                       # Streamlit app entry point
+└── README.md                    # Project documentation
+```
 
 ---
 
 ## 📸 Screenshots
 
-### 📄 Resume Upload & Summary
+**Resume Summary after Upload**
+![Resume Summary](screenshots/resume_summary.png)
 
-After uploading your resume, the application parses the data, generates a summary, and identifies skill gaps.
-
-![Resume Upload Feedback](screenshot/Resume_Upload_Feedback.png)
-
----
-
-### 💼 Job Recommendations
-
-Based on your parsed skills, the system recommends the most relevant jobs from LinkedIn, Naukri, and other sources.
-
-![Job Recommendation](screenshot/Job_Recommendation.png)
+**Job Recommendations**
+![Job Recommendations](screenshots/job_recommendations.png)
 
 ---
 
-## 📜 License
+## ⚙️ Installation & Usage
 
-This project is licensed under the MIT License.
+1️⃣ **Clone the Repository**
 
----
-
-## ✨ Author
-
-**Rahul Kumar**
-📧 [rahulkumar.19k8@gmail.com](mailto:rahulkumar.19k8@gmail.com)
-🔗 [LinkedIn](https://www.linkedin.com/in/rahulkumar19k8/)
-
+```bash
+git clone https://github.com/yourusername/AI-Job-Recommender.git
+cd AI-Job-Recommender
 ```
 
-This way, your README stays neat, and your contact info is clickable.  
-I can also add a **"How It Works" diagram section** so recruiters and devs instantly understand your workflow. That would make it look very professional.
+2️⃣ **Create & Activate Virtual Environment**
+
+```bash
+python -m venv venv
+venv\Scripts\activate  # Windows
+source venv/bin/activate  # Mac/Linux
 ```
+
+3️⃣ **Install Dependencies**
+
+```bash
+pip install -r requirements.txt
+```
+
+4️⃣ **Set Environment Variables**
+Create a `.env` file and add:
+
+```bash
+SCRAPDOG_API_KEY=your_api_key
+APIFY_API_KEY=your_api_key
+```
+
+5️⃣ **Run the App**
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## 📬 Contact
+
+📧 Email: **[your.email@example.com](mailto:your.email@example.com)**
+🔗 LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/your-linkedin-username/)
+
+---
+
+
