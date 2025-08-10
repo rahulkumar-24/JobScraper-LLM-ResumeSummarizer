@@ -1,6 +1,4 @@
-
-
----
+Here’s your updated **README.md** with your email and LinkedIn link inserted, while keeping the exact structure intact:
 
 ```markdown
 # 📄 AI Job Recommender
@@ -56,7 +54,7 @@ project/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/ai-job-recommender.git
+   git clone https://github.com/rahulkumar-24/JobScraper-LLM-ResumeSummarizer.git
    cd ai-job-recommender
 ````
 
@@ -119,12 +117,12 @@ This project is licensed under the MIT License.
 
 ## ✨ Author
 
-**Your Name**
-📧 [your.email@example.com](mailto:your.email@example.com)
-🔗 [LinkedIn](https://linkedin.com/in/yourprofile) | [GitHub](https://github.com/yourusername)
+**Rahul Kumar**
+📧 [rahulkumar.19k8@gmail.com](mailto:rahulkumar.19k8@gmail.com)
+🔗 [LinkedIn](https://www.linkedin.com/in/rahulkumar19k8/)
 
 ```
 
----
-
+This way, your README stays neat, and your contact info is clickable.  
+I can also add a **"How It Works" diagram section** so recruiters and devs instantly understand your workflow. That would make it look very professional.
 ```
