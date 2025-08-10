@@ -1,0 +1,26 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+
+# Distribution / packaging
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Virtual environment folders
+.venv/
+venv/
+src/venv/
+
+# Environment variables
+.env
+
+# VS Code settings
+.vscode/
+
+
+
+# Windows specific
+Thumbs.db
+
