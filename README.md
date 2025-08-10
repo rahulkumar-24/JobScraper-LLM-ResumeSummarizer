@@ -54,7 +54,7 @@ AI-Job-Recommender/
 ![Resume Summary](screenshot/Resume_Upload_Feedback.png)
 
 **Job Recommendations**
-![Job Recommendations](screenshots/Job_Recommendations.png)
+![Job Recommendations](screenshots/Job_Recommendation.png)
 
 ---
 
