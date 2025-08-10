@@ -1,4 +1,11 @@
+# Streamlit – for building and running the interactive web app UI
 streamlit
+
+# PyMuPDF – for working with PDF files (reading, extracting text/images, manipulating pages)
 pymupdf
+
+# python-dotenv – for loading environment variables from a .env file
 python-dotenv
+
+# apify-client – for interacting with Apify API to run actors and fetch data
 apify-client
