@@ -51,10 +51,10 @@ AI-Job-Recommender/
 ## 📸 Screenshots
 
 **Resume Summary after Upload**
-![Resume Summary](screenshots/resume_summary.png)
+![Resume Summary](screenshot/Resume_Upload_Feedback.png)
 
 **Job Recommendations**
-![Job Recommendations](screenshots/job_recommendations.png)
+![Job Recommendations](screenshots/Job_Recommendations.png)
 
 ---
 
@@ -64,7 +64,7 @@ AI-Job-Recommender/
 
 ```bash
 git clone https://github.com/yourusername/AI-Job-Recommender.git
-cd AI-Job-Recommender
+cd AJobScraper-LLM-ResumeSummarizer
 ```
 
 2️⃣ **Create & Activate Virtual Environment**
@@ -85,6 +85,7 @@ pip install -r requirements.txt
 Create a `.env` file and add:
 
 ```bash
+GEMINI_API_KEY = your_api_key
 SCRAPDOG_API_KEY=your_api_key
 APIFY_API_KEY=your_api_key
 ```
@@ -99,8 +100,8 @@ streamlit run app.py
 
 ## 📬 Contact
 
-📧 Email: **[your.email@example.com](mailto:your.email@example.com)**
-🔗 LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/your-linkedin-username/)
+📧 Email: **[your.email@example.com](mailto:rahulkumar.19k8@gmail.com)**
+🔗 LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/rahulkumar19k8/)
 
 ---
 
