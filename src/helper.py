@@ -28,17 +28,4 @@ def extract_text_from_pdf(uploaded_file):
     return text
 
 
-def ask_gemini(prompt, max_output_tokens=500):
-    """
-    Sends a prompt to the Gemini API and returns the response.
-    
-    Args:
-        prompt (str): The prompt to send to the Gemini API.
-        max_output_tokens (int): The maximum number of tokens in the response.
-        
-    Returns:
-        str: The response from the Gemini API.
-    """
-    model = genai.GenerativeModel("gemini-2.0-flash")
-    response = model.generate_content(prompt, generation_config={"max_output_tokens": max_output_tokens})
-    return response.text
+

@@ -1,6 +1,33 @@
+import os
 import streamlit as st
-from src.helper import extract_text_from_pdf, ask_gemini
+from dotenv import load_dotenv
+from src.helper import extract_text_from_pdf
 from src.fetch_job import fetch_linkedin_jobs, fetch_naukri_jobs
+from langchain.prompts import PromptTemplate
+from langchain_google_genai import ChatGoogleGenerativeAI
+
+# ---------------- LOAD ENV VARIABLES ----------------
+load_dotenv()
+os.environ["GOOGLE_API_KEY"] = os.getenv("Gemini_API_KEY")  # Load API key from .env
+
+# ---------------- INITIALIZE MODEL ONCE ----------------
+llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0.3)
+
+def ask_langchain(prompt_text, variables=None, max_tokens=500):
+    """
+    Uses LangChain with Gemini 2.0 Flash to process prompts.
+    variables: dict for PromptTemplate variables
+    """
+    if variables is None:
+        variables = {}
+    
+    prompt = PromptTemplate(
+        input_variables=list(variables.keys()),
+        template=prompt_text
+    )
+    chain = prompt | llm
+    result = chain.invoke(variables)
+    return result.content
 
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(page_title="🚀 AI Job Recommender", layout="wide")
@@ -14,24 +41,30 @@ if uploaded_file:
     with st.spinner("⏳ Extracting text from your resume... 📄"):
         resume_text = extract_text_from_pdf(uploaded_file)
 
+    # Resume Summary
     with st.spinner("📝 Summarizing your resume... ✨"):
-        summary = ask_gemini(
-            f"Summarize this resume highlighting the skills, education, and experience:\n\n{resume_text}",
-            max_output_tokens=500
+        summary = ask_langchain(
+            "Summarize this resume highlighting the skills, education, and experience:\n\n{resume_text}",
+            variables={"resume_text": resume_text},
+            max_tokens=500
         )
 
+    # Skill Gaps
     with st.spinner("🔍 Finding skill gaps... 🛠️"):
-        gaps = ask_gemini(
-            f"Analyze this resume and highlight missing skills, certifications, and experiences needed for better job opportunities:\n\n{resume_text}",
-            max_output_tokens=400
+        gaps = ask_langchain(
+            "Analyze this resume and highlight missing skills, certifications, and experiences needed for better job opportunities:\n\n{resume_text}",
+            variables={"resume_text": resume_text},
+            max_tokens=400
         )
 
+    # Roadmap
     with st.spinner("📈 Creating your future career roadmap... 🚀"):
-        roadmap = ask_gemini(
-            f"Based on this resume, suggest a future roadmap to improve career prospects (Skills to learn, certifications, industry exposure):\n\n{resume_text}",
-            max_output_tokens=400
+        roadmap = ask_langchain(
+            "Based on this resume, suggest a future roadmap to improve career prospects (Skills to learn, certifications, industry exposure):\n\n{resume_text}",
+            variables={"resume_text": resume_text},
+            max_tokens=400
         )
-    
+
     # ---------------- RESULTS DISPLAY ----------------
     def display_card(title, icon, content):
         st.markdown(f"### {icon} {title}")
@@ -50,8 +83,8 @@ if uploaded_file:
     # ---------------- JOB RECOMMENDATION ----------------
     if st.button("🔎 Get Job Recommendations"):
         with st.spinner("🤖 Analyzing your profile & generating job keywords... 🔍"):
-            keywords = ask_gemini(
-                f"""
+            keywords = ask_langchain(
+                """
                 You are a career advisor. Based on the resume summary below, generate a highly relevant,
                 comma-separated list of specific job titles that match the candidate’s skills, work experience,
                 industry background, and education.
@@ -59,7 +92,8 @@ if uploaded_file:
                 Resume Summary:
                 {summary}
                 """,
-                max_output_tokens=150
+                variables={"summary": summary},
+                max_tokens=150
             )
             search_keywords_clean = keywords.replace("\n", "").strip()
 
