@@ -7,23 +7,30 @@ This project recommends jobs based on a user’s resume by parsing the document,
 
 ## 🚀 Features
 
+
 * **Resume Parsing** using PyMuPDF
 * **Summary Generation** of candidate’s experience and skills
 * **Skill Gap Analysis** for next career steps
 * **Job Recommendations** from LinkedIn (via Scrapdog API)
 * **Streamlit UI** for easy interaction
+* **LangChain Integration** for AI-powered text processing with Gemini models
 * **.env file support** for managing API keys securely
+
 
 ---
 
 ## 🛠️ Tech Stack & Libraries
 
 * **Python**
+Here’s your updated list with **LangChain** and the Scrapingdog link added:
+
 * [Streamlit](https://streamlit.io/) – Web app framework
 * [PyMuPDF](https://pymupdf.readthedocs.io/) – PDF text extraction
 * [python-dotenv](https://pypi.org/project/python-dotenv/) – Environment variable management
 * [apify-client](https://pypi.org/project/apify-client/) – API integration
-* **Scrapdog API** – LinkedIn job scraping
+* [LangChain](https://www.langchain.com/) – AI workflow orchestration with Gemini models
+* [Scrapdog API](https://www.scrapingdog.com/) – LinkedIn job scraping
+
 
 ---
 

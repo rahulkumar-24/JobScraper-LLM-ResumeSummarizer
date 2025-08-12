@@ -9,3 +9,9 @@ python-dotenv
 
 # apify-client – for interacting with Apify API to run actors and fetch data
 apify-client
+
+# LangChain – framework for building LLM-powered applications
+langchain
+
+# LangChain Google Generative AI – integration for Gemini models
+langchain-google-genai
